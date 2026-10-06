@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday Alishba Rizwan 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#f7a8c4; --blush:#ffe3ee; --lav:#c9b6f2; --plum:#5b3a73; --gold:#e8b86a; --ink:#3b2750;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Poppins',system-ui,sans-serif;color:var(--ink);line-height:1.7;overflow-x:hidden;
+  background:linear-gradient(120deg,#ffe3ee,#e9defa,#ffeed8,#ffe3ee);background-size:300% 300%;
+  animation:bgshift 18s ease infinite;
+}
+@keyframes bgshift{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+.script{font-family:'Great Vibes',cursive;font-weight:400}
+section{position:relative;z-index:2;padding:90px 20px;max-width:960px;margin:0 auto;text-align:center}
+h2{font-size:clamp(2.4rem,7vw,3.6rem);color:var(--plum);margin-bottom:28px}
+
+/* loader */
+#loader{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#fff3f8;transition:opacity .8s,visibility .8s}
+#loader.done{opacity:0;visibility:hidden}
+#loader span{font-size:4rem;animation:beat 1s infinite}
+@keyframes beat{50%{transform:scale(1.25)}}
+
+/* floating background */
+#floaters{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.fl{position:absolute;bottom:-60px;animation:rise linear infinite;opacity:.7}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+canvas#confetti{position:fixed;inset:0;z-index:60;pointer-events:none}
+
+/* hero */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero .small{letter-spacing:.2em;font-size:.95rem;color:var(--plum);opacity:.8}
+.hero h1{font-size:clamp(3.6rem,15vw,8rem);line-height:1.05;margin:10px 0;
+  background:linear-gradient(90deg,#d6639a,#9a6ad8,#e0a24a,#d6639a);background-size:250%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:250% 0}}
+.name{font-size:clamp(1.6rem,6vw,2.6rem);min-height:3.2rem;color:var(--plum);font-weight:300}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--plum);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.btn{margin-top:34px;border:0;cursor:pointer;font:500 1.05rem 'Poppins',sans-serif;color:#fff;padding:15px 36px;border-radius:999px;
+  background:linear-gradient(135deg,#e0699f,#9a6ad8);box-shadow:0 8px 28px rgba(154,106,216,.4);animation:glow 2.4s ease-in-out infinite;transition:transform .2s}
+.btn:hover{transform:translateY(-3px) scale(1.04)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@keyframes glow{50%{box-shadow:0 8px 40px rgba(224,105,159,.75)}}
+
+/* glass */
+.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.8);border-radius:28px;box-shadow:0 12px 40px rgba(120,80,160,.15)}
+
+/* countdown */
+#count{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.box{padding:18px 22px;min-width:92px}
+.box b{display:block;font-size:2.2rem;font-weight:500;color:#c2528a}
+.box small{color:var(--plum)}
+#itsday{font-size:clamp(2.4rem,8vw,4rem);color:#c2528a}
+
+/* letter */
+.letter{padding:44px 30px;text-align:left;max-width:640px;margin:auto}
+.letter p{margin-bottom:16px;font-size:1.05rem}
+.letter .sign{font-size:2.2rem;color:#c2528a;text-align:right;margin:0}
+
+/* wishes */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.wish{padding:30px 24px;transition:transform .3s}
+.wish:hover{transform:translateY(-8px) rotate(-1deg)}
+.wish i{font-style:normal;font-size:2.4rem;display:block;margin-bottom:8px}
+.wish h3{font-weight:500;color:var(--plum);margin-bottom:6px}
+.wish p{font-size:.95rem}
+
+/* cake */
+.cake{position:relative;width:240px;height:210px;margin:30px auto 0}
+.tier{position:absolute;left:50%;transform:translateX(-50%);border-radius:14px 14px 8px 8px;box-shadow:inset 0 -8px 0 rgba(0,0,0,.07)}
+.t1{bottom:0;width:240px;height:70px;background:linear-gradient(#f7a8c4,#ef7fa9)}
+.t2{bottom:70px;width:170px;height:60px;background:linear-gradient(#e0d2fa,#b79cec)}
+.t3{bottom:130px;width:100px;height:46px;background:linear-gradient(#fff0cf,#f1c77d)}
+.drip{position:absolute;top:0;left:0;right:0;height:14px;border-radius:14px 14px 40% 40%;background:rgba(255,255,255,.85)}
+.candles{position:absolute;bottom:176px;left:50%;transform:translateX(-50%);display:flex;gap:18px}
+.candle{position:relative;width:10px;height:38px;background:repeating-linear-gradient(45deg,#fff,#fff 6px,#f7a8c4 6px,#f7a8c4 12px);border-radius:3px}
+.flame{position:absolute;top:-24px;left:50%;width:14px;height:22px;margin-left:-7px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  background:radial-gradient(#fff 15%,#ffd36b 50%,#ff9d42);box-shadow:0 0 18px 6px rgba(255,190,80,.6);transform-origin:bottom;animation:flick .25s infinite alternate;transition:opacity .4s,transform .4s}
+.out .flame{opacity:0;transform:scale(0);animation:none}
+@keyframes flick{from{transform:rotate(-4deg) scaleY(1)}to{transform:rotate(4deg) scaleY(1.12)}}
+#cakeMsg{margin-top:26px;min-height:2.4rem;font-size:1.6rem;color:#c2528a}
+
+/* modal */
+#modal{position:fixed;inset:0;z-index:70;display:grid;place-items:center;padding:20px;background:rgba(60,30,80,.45);opacity:0;visibility:hidden;transition:.4s}
+#modal.show{opacity:1;visibility:visible}
+#modal .glass{max-width:460px;padding:44px 30px;background:rgba(255,255,255,.88);transform:scale(.8);transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+#modal.show .glass{transform:scale(1)}
+#modal h3{font-size:2.8rem;color:#c2528a;margin-bottom:10px}
+#modal .btn{margin-top:20px;padding:11px 28px;animation:none}
+
+footer{position:relative;z-index:2;text-align:center;padding:40px 20px 60px;color:var(--plum)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="loader"><span>🎂</span></div>
+<div id="floaters" aria-hidden="true"></div>
+<canvas id="confetti"></canvas>
+
+<section class="hero">
+  <p class="small">A SPECIAL DAY FOR A SPECIAL PERSON</p>
+  <h1 class="script">Happy Birthday</h1>
+  <div class="name"><span id="typed"></span><span class="caret"></span></div>
+  <button class="btn" id="surprise">Open your surprise 🎁</button>
+</section>
+
+<section class="reveal">
+  <h2 class="script">Almost your day</h2>
+  <div id="count"></div>
+</section>
+
+<section class="reveal">
+  <h2 class="script">A little note for you</h2>
+  <div class="glass letter">
+    <p>Dear Alishba,</p>
+    <p>Today is all about you. Thank you for being the kind of person who makes ordinary days brighter, who listens, who laughs at the right moments, and who makes people feel like they matter.</p>
+    <p>I hope this year brings you everything you have been quietly wishing for: good news, big wins, peaceful mornings and lots of reasons to smile.</p>
+    <p>Happy Birthday, and may every goal you set find its way to you.</p>
+    <p class="sign script">Your friend, Moosa</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="script reveal">Wishes for you</h2>
+  <div class="grid">
+    <div class="glass wish reveal"><i>🌸</i><h3>Happiness</h3><p>May your days be full of laughter that reaches your eyes.</p></div>
+    <div class="glass wish reveal"><i>🌟</i><h3>Success</h3><p>May every effort you put in come back to you as a win.</p></div>
+    <div class="glass wish reveal"><i>💖</i><h3>Health</h3><p>Strong, rested and full of energy for everything you love.</p></div>
+    <div class="glass wish reveal"><i>🤝</i><h3>Friendship</h3><p>May you always be surrounded by people who value you.</p></div>
+    <div class="glass wish reveal"><i>🦋</i><h3>Dreams</h3><p>May the big dreams you carry slowly turn into real life.</p></div>
+    <div class="glass wish reveal"><i>✨</i><h3>Joy</h3><p>May small moments feel magical all year long.</p></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2 class="script">Make a wish</h2>
+  <p>Close your eyes, think of something wonderful, then blow out the candles.</p>
+  <div class="cake" id="cake">
+    <div class="candles"><div class="candle"><div class="flame"></div></div><div class="candle"><div class="flame"></div></div><div class="candle"><div class="flame"></div></div></div>
+    <div class="tier t3"><div class="drip"></div></div>
+    <div class="tier t2"><div class="drip"></div></div>
+    <div class="tier t1"><div class="drip"></div></div>
+  </div>
+  <button class="btn" id="blow">Blow the candles 🕯️</button>
+  <div id="cakeMsg" class="script"></div>
+</section>
+
+<footer>Made with ❤️ by Muhammad Moosa</footer>
+
+<div id="modal" role="dialog" aria-modal="true">
+  <div class="glass">
+    <h3 class="script">Happy Birthday, Alishba!</h3>
+    <p>You deserve the happiest day ever. Wishing you a year filled with love, success and endless smiles. 💖</p>
+    <button class="btn" id="close">Thank you!</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  // loader
+  window.addEventListener('load',function(){setTimeout(function(){document.getElementById('loader').classList.add('done')},1000)});
+
+  // floating balloons, hearts, sparkles
+  var fl=document.getElementById('floaters'),icons=['🎈','💖','✨','🌸','🎀','💜'];
+  for(var i=0;i<22;i++){
+    var s=document.createElement('span');s.className='fl';s.textContent=icons[i%icons.length];
+    s.style.left=Math.random()*100+'%';s.style.fontSize=(16+Math.random()*26)+'px';
+    s.style.animationDuration=(12+Math.random()*16)+'s';s.style.animationDelay=(-Math.random()*20)+'s';
+    fl.appendChild(s);
+  }
+
+  // typing effect
+  var text='Alishba Rizwan 🎉',t=document.getElementById('typed'),n=0;
+  setTimeout(function type(){t.textContent=text.slice(0,++n);if(n<text.length)setTimeout(type,120)},1400);
+
+  // countdown to Oct 7, 2026 (local midnight)
+  var target=new Date(2026,9,7,0,0,0),box=document.getElementById('count');
+  function tick(){
+    var d=target-new Date();
+    if(d<=0){box.innerHTML='<div id="itsday" class="script">It\'s your day, Alishba! 🎉</div>';return}
+    var v=[[Math.floor(d/864e5),'days'],[Math.floor(d/36e5)%24,'hours'],[Math.floor(d/6e4)%60,'minutes'],[Math.floor(d/1e3)%60,'seconds']];
+    box.innerHTML=v.map(function(x){return '<div class="glass box"><b>'+String(x[0]).padStart(2,'0')+'</b><small>'+x[1]+'</small></div>'}).join('');
+  }
+  tick();setInterval(tick,1000);
+
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(el.classList.contains('wish')?(i%3)*.12:0)+'s';io.observe(el)});
+
+  // confetti
+  var cv=document.getElementById('confetti'),cx=cv.getContext('2d'),parts=[],running=false;
+  function size(){cv.width=innerWidth;cv.height=innerHeight}size();addEventListener('resize',size);
+  var cols=['#f7a8c4','#c9b6f2','#e8b86a','#ff7eb3','#9a6ad8','#fff'];
+  function burst(k){
+    for(var i=0;i<k;i++)parts.push({x:Math.random()*cv.width,y:-20-Math.random()*cv.height*.4,r:4+Math.random()*6,c:cols[i%cols.length],vx:Math.random()*4-2,vy:2+Math.random()*4,a:Math.random()*6,va:Math.random()*.3-.15});
+    if(!running){running=true;requestAnimationFrame(loop)}
+  }
+  function loop(){
+    cx.clearRect(0,0,cv.width,cv.height);
+    parts=parts.filter(function(p){return p.y<cv.height+20});
+    parts.forEach(function(p){p.x+=p.vx+Math.sin(p.a);p.y+=p.vy;p.a+=p.va;cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.fillRect(-p.r,-p.r/2,p.r*2,p.r);cx.restore()});
+    if(parts.length)requestAnimationFrame(loop);else{running=false;cx.clearRect(0,0,cv.width,cv.height)}
+  }
+
+  // surprise modal
+  var modal=document.getElementById('modal');
+  document.getElementById('surprise').onclick=function(){modal.classList.add('show');burst(220)};
+  document.getElementById('close').onclick=function(){modal.classList.remove('show')};
+  modal.onclick=function(e){if(e.target===modal)modal.classList.remove('show')};
+
+  // candles
+  var cake=document.getElementById('cake'),msg=document.getElementById('cakeMsg'),blown=false;
+  document.getElementById('blow').onclick=function(){
+    if(blown){cake.classList.remove('out');msg.textContent='';blown=false;this.textContent='Blow the candles 🕯️';return}
+    cake.classList.add('out');msg.textContent='May all your wishes come true, Alishba! ✨';blown=true;this.textContent='Light them again 🔥';burst(180);
+  };
+})();
+</script>
+</body>
+</html>
